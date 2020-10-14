@@ -7,6 +7,7 @@ import './Contact.css'
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const StyledTextField = styled(TextField)`{
     label.Mui-focused {
@@ -119,11 +120,14 @@ class Contact extends Component {
         this.validate(this.state.name,this.state.email,this.state.message)
         return (
             <div>
+                <Fade left>
                 <div className="header">
                     <h1>We will be happy to hear from you !</h1>
                     <h4>Get in touch with us.</h4>
                 </div>
+                </Fade>
                 <Container>
+                    <Fade right>
                     <Card className="indentCorrection">
                         <CardBody>
                             <h5>Use the public key</h5>
@@ -131,7 +135,8 @@ class Contact extends Component {
                             <h5>to mail us at teamtomato.oss@gmail.com</h5>
                         </CardBody>
                     </Card>
-
+                    </Fade>
+                    <Fade left>
                     <h3 className="center">or</h3>
                     <Form>
                         <StyledTextField fullWidth type="text" name="name" value={name} style={{marginBottom:"10px"}}
@@ -151,6 +156,7 @@ class Contact extends Component {
                         <br />
                         <Button onClick={this.submitHandler} className="col-md-12" style={{ backgroundColor: "violet",color:"white" }} variant="contained" block>Send</Button>
                     </Form>
+                    </Fade>
                 </Container>
             </div>
         );

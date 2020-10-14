@@ -8,7 +8,7 @@ class MainSolutionPage extends React.Component {
         return(
             <div>
                 <NavbarT />
-                <h1 class="Cards-heading">Projects</h1>
+                <h1 className="Cards-heading">Projects</h1>
                 <Cards />
                 <Footer />
             </div>

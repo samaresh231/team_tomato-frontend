@@ -2,10 +2,12 @@ import React from 'react';
 import Articles from './articles.json'
 import './ArticleTable.css';
 import {Container, Row, Col, Table} from 'react-bootstrap';
+import Reveal from 'react-reveal/Reveal';
 
 class ArticleTable extends React.Component{
     render(){
         return(
+            <Reveal right>
             <div className="ArticleTable">
                 <Container fluid>
                 <Row>
@@ -24,7 +26,7 @@ class ArticleTable extends React.Component{
                         <tbody>
                         {
                             Articles.map((article, index) => {
-                                return( 
+                                return(    
                                     <tr>
                                         <td>{index+1}</td>
                                         <td>{article.name}</td>
@@ -42,6 +44,7 @@ class ArticleTable extends React.Component{
                 </Row>
                 </Container>
             </div>
+            </Reveal>
         );
     }
 }

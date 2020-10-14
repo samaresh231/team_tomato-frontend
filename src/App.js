@@ -5,12 +5,16 @@ import {Switch, Route} from 'react-router-dom';
 import MainArticlePage from './components/articles-page/MainArticlePage';
 import MainSolutionPage from './components/solution-page/MainSolutionPage';
 import MainContact from './components/contact-page/MainContact.js';
+import MainGitPage from './components/git-page/MainGitPage';
 import Form from './components/article-submission-form/Form'
 
 function App() {
   return (
     <div className="App">
       <Switch>
+        <Route exact path="/">
+          <MainGitPage />
+        </Route>
         <Route exact path="/solutions">
           <MainSolutionPage />
         </Route>

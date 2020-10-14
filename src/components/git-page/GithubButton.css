@@ -1,0 +1,18 @@
+.GitInfoButton-button {
+    color: black;
+    border: none;
+    width: 12rem;
+    height: 5rem;
+    margin: 1rem;
+}
+
+.GitInfoButton-button:hover {
+    box-shadow: 0px 0px 5px 2px rgba(191,187,191,1);
+    color: black;
+}
+
+.GitInfoButton-button:focus {
+    outline: none;
+    box-shadow: none;
+    color: black;
+}
